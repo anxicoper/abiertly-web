@@ -434,7 +434,7 @@ window.mountHeroB = function (host) {
       '<small>Es un cálculo con tus propios números, no una promesa.</small><button class="b-btn" data-goto="diag">Quiero dejar de perderlos</button>' +
     '</div></div></div></section>';
   var SEC6 = '<section class="b-s6" aria-label="Sobre mí"><div class="b-s6-in"><div class="b-bridge2" data-bridge data-t="Aquí te atiende una persona." data-fx="curtain"></div>' +
-    '<div class="b-about"><figure class="b-photo"><span class="b-dots"><i></i><i></i><i></i></span><img src="' + (window.ABIERTLY_FOTO_B || 'assets/foto-b.webp') + '" width="540" height="960" loading="lazy" decoding="async" alt="Angélica Corzo, diseñadora"></figure>' +
+    '<div class="b-about"><figure class="b-photo"><span class="b-dots"><i></i><i></i><i></i></span><img src="' + (window.ABIERTLY_FOTO_B || 'assets/foto-b.webp') + '" width="540" height="880" loading="lazy" decoding="async" alt="Angélica Corzo, diseñadora"></figure>' +
     '<div class="txt">' +
     '<p>Soy Angélica Corzo, diseñadora. He hecho más de 20 páginas web y vi que muchas se quedaban quietas: el cliente escribía y nadie contestaba.</p>' +
     '<p>Por eso armé Abiertly: para que tu negocio conteste aunque tengas las manos ocupadas.</p>' +

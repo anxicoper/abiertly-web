@@ -401,7 +401,7 @@
 /* foto fija en caja completa */
 .b-photo { display: block; aspect-ratio: auto; background: #fff; max-width: 300px; padding: 10px; border-radius: 56px 56px 56px 10px; cursor: default; margin: 0 auto 22px; }
 .b-photo:hover { transform: none; }
-.b-photo img { display: block; width: 100%; height: auto; border-radius: 46px 46px 46px 4px; }
+.b-photo img { display: block; width: 100%; height: auto; aspect-ratio: 540 / 880; object-fit: cover; object-position: top; border-radius: 46px 46px 46px 4px; }
 /* texto: etiquetas, consentimiento y letras pequenas de al menos 14 px; el normal, 16 px */
 .b-label, .b-status, .b-pc .tag, .b-form .err, .b-form small, .b-form .chk, .b-cout small, .b-letra, .b-ft .lg2, .b-form .note { font-size: 14px; }
 .b-form .fld { font-size: 15px; }
