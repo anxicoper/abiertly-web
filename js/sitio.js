@@ -21,7 +21,7 @@ window.AbiertlyLogos={"aLogo": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBo
       card: '+1 cita mientras almorzabas' },
     { time: '6:32 p. m. · Ya cerraste', msgs: [
       { from: 'in', t: '¿Hasta qué hora atienden? ¿Cuánto vale?' },
-      { from: 'out', t: 'Hoy ya cerramos, pero aquí tienes los precios y puedes agendar para mañana:', btn: ['Ver precios', 'Agendar'] } ],
+      { from: 'out', t: 'Hoy ya cerramos, pero aquí tienes los planes y puedes agendar para mañana:', btn: ['Ver planes', 'Agendar'] } ],
       card: 'Cerrado, pero atendiendo' },
     { time: '11:47 p. m. → 7:00 a. m. · Mientras dormías', msgs: [
       { from: 'in', t: 'Hola, quiero agendar para el sábado' },
@@ -448,7 +448,7 @@ window.mountHeroB = function (host) {
     ['¿Cómo pago?', 'De una vez o en 2 cuotas: la mitad al empezar y la otra mitad cuando te entrego.'],
     ['¿Sirve para mi tipo de negocio?', 'Si tus clientes te escriben para preguntar precios, horarios o reservar, sí: restaurantes, bares, tiendas, consultorios, barberías, spas. Se adapta a lo que tú vendes.'],
     ['¿Y si el WhatsApp no sabe responder algo?', 'Te llega un aviso para que respondas tú. Solo contesta lo que dejamos preparado: menú, precios, horarios, agenda.'],
-    ['¿Qué incluye la mensualidad y cuánto sale el primer ciclo?', 'Mi mensualidad (COP 200.000) cubre mi trabajo: revisar que todo funcione, responder tus reseñas, cambios pequeños y un reporte cada mes. Las herramientas (ManyChat y los mensajes de WhatsApp) las pagas tú directo, con tu cuenta y tu tarjeta: unos COP 100.000 al mes, según el uso. Con Siempre Abierto, el primer ciclo son COP 1.800.000 de montaje más 3 meses de COP 200.000: COP 2.400.000, más las herramientas.'],
+    ['¿Qué incluye la mensualidad y cómo es el primer ciclo?', 'Mi mensualidad cubre mi trabajo: revisar que todo funcione, responder tus reseñas, cambios pequeños y un reporte cada mes. Las herramientas (ManyChat y los mensajes de WhatsApp) las pagas tú directo, con tu cuenta y tu tarjeta, según el uso. El valor del montaje y de la mensualidad te lo confirmo en tu cotización, antes de empezar.'],
     ['¿Cuánto tiempo me toma a mí?', 'Me mandas tu logo, unas 5 fotos, tu información y tus accesos. Con eso arranco yo.'],
     ['¿Es WhatsApp Business oficial? ¿Me pueden bloquear el número?', 'Se conecta por la plataforma oficial de WhatsApp Business de Meta, con tu número. Solo se le escribe a quien ya te escribió o aceptó recibir mensajes, para cuidar tu número.'],
     ['¿Quién escribe las respuestas automáticas?', 'Yo las escribo contigo y tú las revisas y apruebas antes de activarlas. Después puedes pedirme cambios cuando quieras.'],
@@ -461,31 +461,31 @@ window.mountHeroB = function (host) {
 
   
   var PL = {
-    pres: { n: 'Presencia', price: 'COP 900.000', sub: 'pago único · lista en 7 días hábiles', para: 'Para que te encuentren.',
+    pres: { n: 'Presencia', sub: 'pago único · lista en 7 días hábiles', para: 'Para que te encuentren.',
       pf: 'Negocios que quieren verse bien en Google y recibir pedidos o preguntas por WhatsApp: cafés, tiendas pequeñas, restaurantes que empiezan.',
       li: ['Página web hecha para tu negocio (hasta 5 secciones)', 'Botón de WhatsApp con mensaje listo', 'Perfil de Google completo y link para pedir reseñas', 'Dominio conectado y 2 rondas de cambios'], btn: 'Quiero este plan' },
-    sa: { n: 'Siempre Abierto', tag: 'El que más recomiendo', price: 'COP 1.800.000', sub: 'de montaje + COP 200.000 al mes · listo en 15 días hábiles', para: 'Para que te encuentren y nunca te quedes sin responder.',
+    sa: { n: 'Siempre Abierto', tag: 'El que más recomiendo', sub: 'montaje + mensualidad · listo en 15 días hábiles', para: 'Para que te encuentren y nunca te quedes sin responder.',
       pf: 'Consultorios, odontología, peluquerías, barberías, spas, uñas y gimnasios. Negocios que viven de las citas y las reservas.',
       li: ['Todo lo de Presencia', 'WhatsApp que responde solo, 24/7', 'Reseñas automáticas después de cada cliente', 'Agenda con recordatorios', 'Reporte cada mes por WhatsApp'], btn: 'Quiero este plan' }
   };
-  PL.esen = { n: 'Página Esencial', price: 'desde COP 600.000', sub: 'lista en 4 días hábiles', para: '¿Solo necesitas la página?', pf: '',
+  PL.esen = { n: 'Página Esencial', sub: 'lista en 4 días hábiles', para: '¿Solo necesitas la página?', pf: '',
     li: ['Una sola página con toda tu info', 'Botón de WhatsApp', '1 ronda de cambios'], btn: 'Quiero este plan' };
   var WA_PLAN = A.wa('Hola, quiero saber cuál plan me sirve para mi negocio.');
   var WA_HI = A.wa('Hola Angélica, vi tu página y quiero saber más de Abiertly.');
   var TIENDA = '¿Tienes tienda en línea? <b>Escríbeme y vemos qué necesitas.</b>';
-  var ESENCIAL = '¿Solo necesitas la página? <b>Página Esencial desde COP 600.000, lista en 4 días hábiles.</b> Una sola página con toda tu info, botón de WhatsApp y 1 ronda de cambios.';
-  var LETRA = 'Los días cuentan desde que me mandas tu logo, fotos y textos. El dominio cuesta unos USD 12 a 20 al año. Puedes pagar de una vez o en 2 cuotas: 50 % al empezar y 50 % al entregar. El dominio, tu perfil de Google y tu número quedan a tu nombre.';
+  var ESENCIAL = '¿Solo necesitas la página? <b>Página Esencial, lista en 4 días hábiles.</b> Una sola página con toda tu info, botón de WhatsApp y 1 ronda de cambios.';
+  var LETRA = 'Los días cuentan desde que me mandas tu logo, fotos y textos. El dominio cuesta unos USD 12 a 20 al año. Te cotizo según lo que necesites y puedes pagar de una vez o en 2 cuotas. El dominio, tu perfil de Google y tu número quedan a tu nombre.';
 
   function bCard(k, feat) {
     var p = PL[k];
     return '<article class="b-pc' + (feat ? ' feat' : '') + '" data-rv>' + (feat ? '<span class="tag">' + p.tag + '</span>' : '') +
-      '<h3>' + p.n + '</h3><p class="pr">' + p.price.replace(/^desde /, '<small>desde </small>') + '</p><p class="sb">' + p.sub + '</p><p class="pa">' + p.para + '</p>' +
+      '<h3>' + p.n + '</h3><p class="sb">' + p.sub + '</p><p class="pa">' + p.para + '</p>' +
       (p.pf ? '<p class="pf"><b>Perfecto para:</b> ' + p.pf + '</p>' : '') + '<ul>' + p.li.map(function (x) { return '<li><span class="ck">' + A.icon('check', 16) + '</span>' + x + '</li>'; }).join('') + '</ul>' +
       '<a class="b-btn' + (feat ? ' alt' : ' outline') + '" href="' + WA_PLAN + '" target="_blank" rel="noopener">' + p.btn + '</a></article>';
   }
-  var SEC9 = '<section class="b-s9" id="b-precios" aria-label="Precios"><div class="b-s9-in"><div class="b-bridge2" data-bridge data-t="Lo que cuesta, en pesos." data-fx="scramble"></div>' +
-    '<p class="b-bajada">Pagas el montaje una vez (o en 2 cuotas). La mensualidad es por mi trabajo. Las herramientas las pagas tú directo, con tu propia cuenta y tarjeta.</p>' +
-    '<p class="b-glos">Montaje = lo que pagas una vez para dejar todo funcionando. Mensualidad = lo que me pagas cada mes por mantener todo funcionando. Herramientas = las pagas tú directo (unos COP 100.000 al mes).</p>' +
+  var SEC9 = '<section class="b-s9" id="b-precios" aria-label="Precios"><div class="b-s9-in"><div class="b-bridge2" data-bridge data-t="Elige tu plan." data-fx="scramble"></div>' +
+    '<p class="b-bajada">Te cotizo según lo que necesites. Pagas el montaje una vez (o en 2 cuotas), la mensualidad es por mi trabajo y las herramientas las pagas tú directo, con tu propia cuenta y tarjeta.</p>' +
+    '<p class="b-glos">Montaje = lo que pagas una vez para dejar todo funcionando. Mensualidad = lo que me pagas cada mes por mantener todo funcionando. Herramientas = las pagas tú directo.</p>' +
     '<div class="b-pcs">' + bCard('esen', false) + bCard('pres', false) + bCard('sa', true) + '</div>' +
     '<p class="b-nota">Primer ciclo de 3 meses, después mes a mes. El dominio va aparte (unos USD 12 a 20 al año).</p>' +
     '<div class="b-lines"><div class="ln"><p>' + TIENDA + '</p><a class="b-btn sec" href="' + WA_HI + '" target="_blank" rel="noopener">Escríbeme</a></div>' +
@@ -518,10 +518,10 @@ window.mountHeroB = function (host) {
     '<div class="b-sky"><div class="b-sun"></div>' + clouds + '</div>' +
     '<nav class="b-nav">' +
       '<a class="b-logo" aria-label="Abiertly">' + L.bLogo + '</a>' +
-      '<div class="b-links"><button type="button" data-goto="hago">Qué hago</button><button type="button" data-goto="pasos">Cómo funciona</button><button type="button" data-goto="precios">Precios</button><button type="button" data-goto="preguntas">Preguntas</button></div>' +
+      '<div class="b-links"><button type="button" data-goto="hago">Qué hago</button><button type="button" data-goto="pasos">Cómo funciona</button><button type="button" data-goto="precios">Planes</button><button type="button" data-goto="preguntas">Preguntas</button></div>' +
       '<div class="b-nav-r"><span class="b-status"><i class="b-dot"></i>WhatsApp activo 24/7</span>' +
       '<a class="b-btn nav-cta" href="' + WA_HELLO + '" target="_blank" rel="noopener">Escríbeme</a><button type="button" class="b-burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="b-menu">' + A.icon('menu', 22) + '</button></div>' +
-      '<div class="b-menu" id="b-menu" hidden><button type="button" data-goto="hago">Qué hago</button><button type="button" data-goto="pasos">Cómo funciona</button><button type="button" data-goto="precios">Precios</button><button type="button" data-goto="preguntas">Preguntas</button></div>' +
+      '<div class="b-menu" id="b-menu" hidden><button type="button" data-goto="hago">Qué hago</button><button type="button" data-goto="pasos">Cómo funciona</button><button type="button" data-goto="precios">Planes</button><button type="button" data-goto="preguntas">Preguntas</button></div>' +
     '</nav>' +
     '<div class="b-main">' +
       '<p class="b-eyebrow">PÁGINA WEB · WHATSAPP 24/7 · RESEÑAS EN GOOGLE</p>' +
@@ -557,7 +557,7 @@ window.mountHeroB = function (host) {
       { from: 'out', t: 'Perfecto, quedó agendada tu cita. Te recuerdo un día antes.' } ], card: '+1 cita mientras almorzabas' },
     { time: '6:32 p. m. · Ya cerraste', msgs: [
       { from: 'in', t: '¿Hasta qué hora atienden? ¿Cuánto vale?' },
-      { from: 'out', t: 'Hoy ya cerramos, pero aquí tienes los precios y puedes agendar para mañana:', btn: ['Ver precios', 'Agendar'] } ], card: 'Cerrado, pero atendiendo' },
+      { from: 'out', t: 'Hoy ya cerramos, pero aquí tienes los planes y puedes agendar para mañana:', btn: ['Ver planes', 'Agendar'] } ], card: 'Cerrado, pero atendiendo' },
     { time: '11:47 p. m. → 7:00 a. m. · Mientras dormías', msgs: [
       { from: 'in', t: 'Hola, quiero agendar para el sábado' },
       { from: 'out', t: '¡Listo! Te agendé el sábado a las 10. Mañana te confirmo por aquí.' } ],
