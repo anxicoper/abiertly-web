@@ -550,3 +550,10 @@
 /* tarjeta de tienda: fila completa debajo de los tres planes */
 .b-pc.wide, .b-pcs .b-pc:nth-child(4) { grid-column: 1 / -1; }
 @media (min-width: 900px) { .b-pcs .b-pc:nth-child(4) ul { columns: 2; column-gap: 32px; } .b-pcs .b-pc:nth-child(4) li { break-inside: avoid; } .b-pcs .b-pc:nth-child(4) { margin-top: 0; } }
+
+/* cinco cosas: filas parejas, sin escalones */
+@container hb (min-width: 900px) {
+  .b-grid { align-items: stretch; }
+  .b-card:nth-child(4), .b-card:nth-child(5) { margin-top: 0; }
+  .b-card { min-height: 280px; }
+}
