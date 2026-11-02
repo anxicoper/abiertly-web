@@ -546,3 +546,7 @@
   .b-wrap .fx-curtain .fx-w::after, .b-wrap .fx-cur { display: none !important; }
   .b-wrap .b-rot .rot-ph:not(:first-child) { display: none; }
 }
+
+/* tarjeta de tienda: fila completa debajo de los tres planes */
+.b-pc.wide, .b-pcs .b-pc:nth-child(4) { grid-column: 1 / -1; }
+@media (min-width: 900px) { .b-pcs .b-pc:nth-child(4) ul { columns: 2; column-gap: 32px; } .b-pcs .b-pc:nth-child(4) li { break-inside: avoid; } .b-pcs .b-pc:nth-child(4) { margin-top: 0; } }

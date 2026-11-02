@@ -468,6 +468,9 @@ window.mountHeroB = function (host) {
       pf: 'Consultorios, odontología, peluquerías, barberías, spas, uñas y gimnasios. Negocios que viven de las citas y las reservas.',
       li: ['Todo lo de Presencia', 'WhatsApp que responde solo, 24/7', 'Reseñas automáticas después de cada cliente', 'Agenda con recordatorios', 'Reporte cada mes por WhatsApp'], btn: 'Quiero este plan' }
   };
+  PL.tienda = { n: 'Tienda en línea', sub: 'en Shopify · listo en 15 a 20 días hábiles', para: 'Para que vendan por ti mientras tú atiendes.',
+    pf: 'Negocios que venden productos y necesitan una tienda con inventario.',
+    li: ['Todo lo de Siempre Abierto', 'Tu tienda en Shopify, con tus productos ya cargados', 'Inventario y categorías organizados', 'WhatsApp conectado a tu tienda: carritos abandonados y recompra'], btn: 'Hablemos' };
   PL.esen = { n: 'Página Esencial', sub: 'lista en 4 días hábiles', para: '¿Solo necesitas la página?', pf: '',
     li: ['Una sola página con toda tu info', 'Botón de WhatsApp', '1 ronda de cambios'], btn: 'Quiero este plan' };
   var WA_PLAN = A.wa('Hola, quiero saber cuál plan me sirve para mi negocio.');
@@ -486,9 +489,9 @@ window.mountHeroB = function (host) {
   var SEC9 = '<section class="b-s9" id="b-precios" aria-label="Precios"><div class="b-s9-in"><div class="b-bridge2" data-bridge data-t="Elige tu plan." data-fx="scramble"></div>' +
     '<p class="b-bajada">Te cotizo según lo que necesites. Pagas el montaje una vez (o en 2 cuotas), la mensualidad es por mi trabajo y las herramientas las pagas tú directo, con tu propia cuenta y tarjeta.</p>' +
     '<p class="b-glos">Montaje = lo que pagas una vez para dejar todo funcionando. Mensualidad = lo que me pagas cada mes por mantener todo funcionando. Herramientas = las pagas tú directo.</p>' +
-    '<div class="b-pcs">' + bCard('esen', false) + bCard('pres', false) + bCard('sa', true) + '</div>' +
+    '<div class="b-pcs">' + bCard('esen', false) + bCard('pres', false) + bCard('sa', true) + bCard('tienda', false) + '</div>' +
     '<p class="b-nota">Primer ciclo de 3 meses, después mes a mes. El dominio va aparte (unos USD 12 a 20 al año).</p>' +
-    '<div class="b-lines"><div class="ln"><p>' + TIENDA + '</p><a class="b-btn sec" href="' + WA_HI + '" target="_blank" rel="noopener">Escríbeme</a></div>' +
+    '<div class="b-lines">' +
     
     '<p class="b-letra">' + LETRA + '</p></div></section>';
   var SEC7 = '<section class="b-s7" id="b-preguntas" aria-label="Preguntas"><div class="b-s7-in"><div class="b-bridge2" data-bridge data-t="Preguntas" data-fx="balloons"></div>' +
